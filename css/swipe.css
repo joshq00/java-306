@@ -1,0 +1,37 @@
+body{
+    width: 100%;
+    margin-left: 0;
+    font-family: helvetica, arial, sans-serif;
+}
+.instructions{
+    padding-left: 10px;
+    font-size: .9em;
+    background-color: #f58220;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5em;
+}
+
+.list{
+    width: 100%;
+    padding-top: 10px;    
+}
+
+.listItem{
+    border-bottom: 1px solid #999999;
+    padding: 10px;
+}
+
+.listItem:first-child{
+    border-top: 1px solid #999999;
+}
+
+.listItem span{
+    display: block;
+    font-size: .9em;
+}
+
+.listItem span.title{
+    font-size: 1.3em;
+    color: #333333;
+}
