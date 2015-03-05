@@ -9,5 +9,8 @@
   "dependencies": {
     "flux": "^2.0.1",
     "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.4"
   }
 }
