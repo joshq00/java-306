@@ -5,5 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Josh Quintana"
+  "author": "Josh Quintana",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "react": "^0.12.2"
+  }
 }

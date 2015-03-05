@@ -1,0 +1,60 @@
+body{
+    width: 100%;
+    margin-left: 0;
+    font-family: helvetica, arial, sans-serif;
+}
+.instructions{
+    padding-left: 10px;
+    font-size: .9em;
+    background-color: #f58220;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5em;
+}
+
+.list {
+    width: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.listItem {
+    border-bottom: 1px solid #999999;
+    padding: 10px;
+    position: relative;
+}
+
+.listItem button.delete {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    background: red;
+    border: 0;
+    color: white;
+}
+
+/*
+.listItem::after {
+    content: 'Delete';
+    position: absolute;
+    background: red;
+    display: block;
+    top: 0;
+    left: 100%;
+}
+*/
+
+.listItem:first-child{
+    border-top: 1px solid #999999;
+}
+
+.listItem span{
+    display: block;
+    font-size: .9em;
+}
+
+.listItem span.title{
+    font-size: 1.3em;
+    color: #333333;
+}
