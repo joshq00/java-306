@@ -3,4 +3,4 @@
 * (dev) Watchify - `npm install -g watchify`
 
 ### Dev
-`watchify --transform babelify --entry src/index.js --outfile build/index.js`
+`watchify --transform babelify --debug --entry src/index.jsx --outfile build/index.js`

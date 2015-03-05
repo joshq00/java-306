@@ -14,12 +14,22 @@ body{
 
 .list{
     width: 100%;
-    padding-top: 10px;    
+    padding-top: 10px;
+    overflow: hidden;
 }
 
-.listItem{
+.listItem {
     border-bottom: 1px solid #999999;
     padding: 10px;
+    position: relative;
+}
+.listItem::after {
+    content: 'Delete';
+    position: absolute;
+    background: red;
+    display: block;
+    top: 0;
+    left: 100%;
 }
 
 .listItem:first-child{
