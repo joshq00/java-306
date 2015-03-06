@@ -23,22 +23,30 @@ function remove ( id ) {
 class ItemStore extends EventEmitter {
 	constructor () {
 		super();
-		this._token = dispatcher.register( action => {
-			// default to a resolved promise
-			let future = Promise.resolve();
 
-			let { type, payload } = action;
-			switch ( type ) {
-			case actions.REMOVE:
-				future = remove( payload.id );
-				break;
-			}
+		let handler = action => this._handleAction( action );
+		this._token = dispatcher.register( handler );
+	}
 
-			// after the task has completed,
-			// let the listeners know by
-			// emitting the change
-			future.then( () => this.emitChange() );
-		});
+	/**
+	 * Handle an action from the dispatcher
+	 * @param  {Object} action - type and payload
+	 */
+	_handleAction ( action ) {
+		// default to a resolved promise
+		let future = Promise.resolve();
+
+		let { type, payload } = action;
+		switch ( type ) {
+		case actions.REMOVE:
+			future = remove( payload.id );
+			break;
+		}
+
+		// after the task has completed,
+		// let the listeners know by
+		// emitting the change
+		future.then( () => this.emitChange() );
 	}
 
 	/**
