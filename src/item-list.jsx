@@ -28,7 +28,7 @@ export default React.createClass({
 	},
 	render() {
 		let items = this.state.items.map( item =>
-			<ListItem key={item.id} item={item} />
+			<Item key={item.id} item={item} />
 		);
 
 		return (
@@ -40,7 +40,7 @@ export default React.createClass({
 });
 
 /* an individual item */
-let ListItem = React.createClass({
+let Item = React.createClass({
 	/**
 	 * Define the properties that this class will use
 	 *
@@ -73,6 +73,9 @@ let ListItem = React.createClass({
 					<span className='detail'>
 						{this.props.item.detail}
 					</span>
+
+					{this.props.children}
+
 				</div>
 				<div className='actions'>
 					<button className='delete' onClick={this._delete}>Delete</button>

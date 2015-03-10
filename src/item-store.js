@@ -17,7 +17,7 @@ function sleep ( ms ) {
  */
 function remove ( id ) {
 	delete _items[ id ];
-	return sleep( 100 );
+	return sleep( 200 );
 }
 
 class ItemStore extends EventEmitter {
