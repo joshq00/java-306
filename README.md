@@ -1,43 +1,29 @@
 # Java 306 homework
 * ~~Week 1~~
+* ~~Week 2~~
 
 
 ## Initial setup
+If you just want to view the page, you can open index.html
 
 **Required modules**
- * [browserify]
- * [uglify-js]
- * [watchify][] (dev)
 
+Install dependencies via npm
 ```bash
-./app init
-```
-or
-```bash
-# install browserify and watchify
-npm install -g browserify uglify-js watchify;
-# install dependencies from package.json
 npm install;
 ```
 
-
 ## Build
 * Create `build/index.js`
-* Create minified `build/index.min.js` using [uglify-js]
 
 ```bash
-./app build
+npm install -g webpack;
+webpack -p --config webpack.build.js;
 ```
 
 ## Develop
-We use [watchify] to automagically build our code as files change.
-
-After modifying a file, switch to the browser and refresh; the updates will be available immediately
+Run a server and view changes live (no reloading)!
 
 ```bash
-./app watch
+node server.js
 ```
-
-[browserify]: http://browserify.org/
-[watchify]: https://github.com/substack/watchify
-[uglify-js]: https://github.com/mishoo/UglifyJS2
