@@ -1,0 +1,13 @@
+.respond ( @min-width; @rules ) {
+	@media only screen and ( min-width: @min-width ) {
+		@rules();
+	}
+}
+
+.tablet ( @rules ) {
+	.respond( @tablet, @rules );
+}
+
+.desktop ( @rules ) {
+	.respond( @desktop, @rules );
+}

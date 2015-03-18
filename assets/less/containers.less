@@ -1,0 +1,184 @@
+html {
+	background: white;
+
+	overflow-y: scroll;
+
+	/* always add Release */
+	&:after {
+		content: 'Release @{version}';
+		text-align: center;
+		display: block;
+		.desktop({
+			font-size: 0.7em;
+			color: white;
+		});
+	}
+
+	font-size: 0.9rem;
+
+	.tablet({
+		font-size: 0.85rem;
+	});
+
+	.desktop({
+		font-size: 0.8rem;
+		background: @backdrop-color;
+	});
+}
+
+body {
+	.desktop({
+		background: @layout-bg-color;
+	});
+	min-width: 275px;
+
+	/* always add copyright */
+	&:after {
+		content: 'Copyright \00A9 2001-2015 Homer TLC, Inc. All Rights Reserved.';
+		text-align: center;
+		display: block;
+		font-size: .6em;
+		padding: @gutter;
+	}
+
+	/* tablet - responsive */
+	.desktop({
+		margin: @gutter;
+		border-radius: @gutter;
+		box-shadow: 5px 4px 5px;
+	});
+}
+
+header {
+	background: @thd-orange;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	z-index: 2;
+	box-shadow: none;
+
+	.tablet({
+		box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.25 );
+	});
+
+	.desktop({
+		position: relative;
+		box-shadow: none;
+		color: black;
+		background: none;
+		background: -webkit-gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#cdcdcd) );
+		border-radius: @gutter @gutter 0 0;
+	});
+
+	.logo {
+		margin: @gutter;
+		padding: 0;
+		border: 1px solid white;
+		outline: none;
+		background: none;
+
+		height: 35px;
+		width: 35px;
+	}
+
+	.menu {
+		.logo;
+		border: none;
+		border-radius: 100%;
+		font-size: 1.25em;
+
+		padding: 0;
+		margin: 0 @gutter;
+		&:before {
+			font-family: FontAwesome;
+			content: '\f013';
+		}
+
+		.desktop({
+			display: none;
+		});
+	}
+
+	.info {
+		flex: 1;
+		white-space: nowrap;
+
+		> * {
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+
+	h1 {
+		font-size: 1.25em;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		text-transform: capitalize;
+
+		.desktop({
+			text-align: left;
+		});
+	}
+
+	.tagline {
+		display: none;
+		.desktop({
+			display: block;
+		});
+	}
+
+	.user {
+		display: none;
+		text-align: right;
+
+		.desktop({
+			display: block;
+		});
+		ul {
+			list-style-type: none;
+			li {
+				display: inline-block;
+				border-left: 1px solid;
+				padding: 0 @gutter;
+				&:first-child {
+					border: none;
+				}
+			}
+		}
+		.location {
+			padding: 0 @gutter;
+		}
+	}
+}
+
+main {
+	background: @bg-color;
+	// position: relative;
+	// top: 0;
+
+	&:before {
+		content: '';
+		height: 2.4em;
+		margin: @gutter;
+		// padding: @gutter;
+		// background: blue;
+		display: block;
+		// position: relative;
+		// .tablet({ height: 1.25em });
+		.desktop({ display: none; });
+	}
+
+	.desktop({
+		top: 0;
+		border: 1px solid @border-color;
+		border-radius: @gutter;
+		margin: @gutter;
+		padding: @gutter;
+	});
+
+}

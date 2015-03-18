@@ -1,0 +1,35 @@
+/* debugging */
+/* override vars */
+@tablet: 500px;
+@desktop: 800px;
+// @tablet: 280px;
+// @desktop: 220px;
+
+/* show which mode we're in */
+body:after {
+	@color: #8c9eff;
+
+	// border-style: solid;
+	// border-width: 0 1px;
+	color: @color;
+	display: block;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	width: 50%;
+
+	content: 'MOBILE';
+
+	.tablet({
+		color: darken( @color, 20% );
+		width: 70%;
+
+		content: 'TABLET';
+	});
+	.desktop({
+		color: darken( @color, 40% );
+		width: 90%;
+
+		content: 'DESKTOP';
+	});
+}

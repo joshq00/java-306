@@ -1,0 +1,82 @@
+{
+    "skus": [
+        {
+            "sku": "1000404955",
+            "descr": " 5X2 MARGIN TROWEL",
+            "uom": "EA",
+            "onhand": 19,
+            "imageS": "images/skus/1000404955.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0022",
+            "dept_txt": "22 BUILDING MATERIALS",
+            "price": 6.99,
+            "upc": "035965061971"
+        },
+        {
+            "sku": "1000134526",
+            "descr": "1/8X1/8X1/8 WOOD TROWEL",
+            "uom": "EA",
+            "onhand": 8,
+            "imageS": "images/skus/1000134526.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0023",
+            "dept_txt": "23 FLOORING",
+            "price": 4.24,
+            "upc": "010306101233"
+        },
+        {
+            "sku": "1000404953",
+            "descr": "10\" BRICK TROWEL",
+            "uom": "EA",
+            "onhand": 10,
+            "imageS": "images/skus/1000404953.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0022",
+            "dept_txt": "22 BUILDING MATERIALS",
+            "price": 10.99,
+            "upc": "035965061964"
+        },
+        {
+            "sku": "1000154459",
+            "descr": "11\" X 4-1/2\" FINISHING TROWEL",
+            "uom": "EA",
+            "onhand": 9,
+            "imageS": "images/skus/1000154459.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0022",
+            "dept_txt": "22 BUILDING MATERIALS",
+            "price": 15.89,
+            "upc": "035965083423"
+        },
+        {
+            "sku": "1000145386",
+            "descr": "11 X 4-1/2 DRYWALL TROWEL",
+            "uom": "EA",
+            "onhand": 11,
+            "imageS": "images/skus/1000145386.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0022",
+            "dept_txt": "22 BUILDING MATERIALS",
+            "price": 44.39,
+            "upc": "035965026116"
+        },
+        {
+            "sku": "1000415611",
+            "descr": "11\" BRICK TROWEL",
+            "uom": "EA",
+            "onhand": 5,
+            "imageS": "images/skus/1000415611.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0022",
+            "dept_txt": "22 BUILDING MATERIALS",
+            "price": 44.39,
+            "upc": "035965001090"
+        }
+    ]
+}

@@ -1,7 +1,8 @@
 import React from 'react';
-import ItemList from './item-list.jsx';
+import App from './app';
+import '../assets/less/app.less';
 
 React.render(
-	<ItemList />,
-	document.querySelector( '#item-list' )
+	<App />,
+	document.body
 );

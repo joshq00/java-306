@@ -2,6 +2,7 @@
   "name": "java306",
   "version": "1.0.0",
   "description": "",
+  "main": "./src/index.jsx",
   "repository": "https://github.com/joshq00/java-306.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,33 @@
     "react": "^0.12.2"
   },
   "devDependencies": {
-    "babelify": "^5.0.4"
+    "babel-core": "^4.7.8",
+    "babel-loader": "^4.1.0",
+    "babelify": "^5.0.4",
+    "css-loader": "^0.9.1",
+    "json-loader": "^0.5.1",
+    "less": "^2.4.0",
+    "less-loader": "^2.1.0",
+    "node-lessify": "0.0.9-b",
+    "react-hot-loader": "^1.2.2",
+    "react-router": "^0.12.4",
+    "react-tap-event-plugin": "^0.1.4",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.7.2",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "ify": {
+    "transform": [
+      "babelify",
+      "node-lessify"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx"
+    ],
+    "external": [
+      "react",
+      "react-router"
+    ]
   }
 }

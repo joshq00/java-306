@@ -1,0 +1,82 @@
+{
+    "skus": [
+        {
+            "sku": "1000524245",
+            "descr": "1\" COMPACT SDS ROTARY HAMMER",
+            "uom": "EA",
+            "onhand": 2,
+            "imageS": "images/skus/1000524245.jpg",
+            "status": "C",
+            "status_txt": "Clearance",
+            "dept": "0025",
+            "dept_txt": "25 HARDWARE",
+            "price": 369,
+            "upc": "045242025299"
+        },
+        {
+            "sku": "1000678815",
+            "descr": "1/2\"PEX TEE WATER HAMMER ARRESTER",
+            "uom": "EA",
+            "onhand": 0,
+            "imageS": "images/skus/1000678815.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0026",
+            "dept_txt": "26 PLUMBING",
+            "price": 17.99,
+            "upc": "061788210104"
+        },
+        {
+            "sku": "1000178491",
+            "descr": "12 OZ RUBBER HAMMER",
+            "uom": "EA",
+            "onhand": 6,
+            "imageS": "images/skus/1000178491.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0025",
+            "dept_txt": "25 HARDWARE",
+            "price": 22.98,
+            "upc": "042944696000"
+        },
+        {
+            "sku": "1000657246",
+            "descr": "120V 1 5/8\" SDS-MAX ROTARY HAMMER",
+            "uom": "EA",
+            "onhand": 0,
+            "imageS": "images/skus/1000657246.jpg",
+            "status": "A",
+            "status_txt": "Active",
+            "dept": "0025",
+            "dept_txt": "25 HARDWARE",
+            "price": 799,
+            "upc": "000346383843"
+        },
+        {
+            "sku": "1000657245",
+            "descr": "120V 1\" SDS-PLUS ROTARY HAMMER/DETECTOR",
+            "uom": "EA",
+            "onhand": 2,
+            "imageS": "images/skus/1000657245.jpg",
+            "status": "C",
+            "status_txt": "Clearance",
+            "dept": "0025",
+            "dept_txt": "25 HARDWARE",
+            "price": 349,
+            "upc": "000346345599"
+        },
+        {
+            "sku": "1000101992",
+            "descr": "14 IN 1 HAMMER MULTI TOOL - S/B",
+            "uom": "EA",
+            "onhand": 0,
+            "imageS": "images/skus/1000101992.jpg",
+            "status": "D",
+            "status_txt": "Discontinued",
+            "dept": "0025",
+            "dept_txt": "25 HARDWARE",
+            "price": 4,
+            "upc": "076812129123"
+        }
+    ]
+}
