@@ -6,7 +6,7 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var webpack = _interopRequire(require("webpack"));
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 var devtool = "eval";
 
@@ -53,6 +53,8 @@ var devServer = {
 	}
 };
 
+var plugins = [new webpack.optimize.UglifyJsPlugin()];
+
 module.exports = {
 	module: { loaders: loaders },
 	port: port,
@@ -62,7 +64,8 @@ module.exports = {
 	// target,
 	// resolveLoader,
 	// externals,
-	resolve: resolve };
+	resolve: resolve,
+	plugins: plugins };
 
 // devServer ? id : name
 // chunkFilename: ( true ) ? '[id].js' : '[name].js',
@@ -78,9 +81,9 @@ module.exports = {
 
 // alias: {}
 
-// plugins,
 // devServer,
 
 // devtool: 'eval',
 // debug: true,
 // node: { fs: 'empty' },
+

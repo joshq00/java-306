@@ -1,7 +1,7 @@
 /* jshint node: true, esnext: true */
 import webpack from 'webpack';
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 5000;
 
 let devtool = 'eval';
 
@@ -82,6 +82,10 @@ let devServer = {
 	}
 };
 
+let plugins = [
+	new webpack.optimize.UglifyJsPlugin()
+];
+
 export default {
 	module: { loaders },
 	port,
@@ -92,7 +96,7 @@ export default {
 	// resolveLoader,
 	// externals,
 	resolve,
-	// plugins,
+	plugins,
 	// devServer,
 
 	// devtool: 'eval',

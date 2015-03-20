@@ -5,14 +5,14 @@
   "main": "./src/index.jsx",
   "repository": "https://github.com/joshq00/java-306.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./node_modules/webpack/bin/webpack.js --config webpack.build.js -p;"
   },
   "author": "Josh Quintana",
   "dependencies": {
     "flux": "^2.0.1",
-    "react": "^0.12.2"
-  },
-  "devDependencies": {
+    "react": "^0.12.2",
     "babel-core": "^4.7.8",
     "babel-loader": "^4.1.0",
     "babelify": "^5.0.4",
@@ -27,6 +27,8 @@
     "style-loader": "^0.8.3",
     "webpack": "^1.7.2",
     "webpack-dev-server": "^1.7.0"
+  },
+  "devDependencies": {
   },
   "ify": {
     "transform": [
