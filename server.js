@@ -1,15 +1,14 @@
-var webpack = require( 'webpack' );
-var WebpackDevServer = require( 'webpack-dev-server' );
-var config = require( './webpack.build' );
+/* jshint devel: true, node: true, strict: false */
+var express = require( 'express' );
+var app = express();
 
-new WebpackDevServer( webpack( config ), {
-	publicPath: config.output.publicPath,
-	historyApiFallback: true
-})
-.listen( config.port, function ( err, result ) {
-	if ( err ) {
-		console.log( err );
-	}
+app.set( 'port', ( process.env.PORT || 5000 ) );
+app.use( '/', express.static( __dirname, {
+	extensions: [ 'htm', 'html' ]
+} ) );
+app.use( '/assets', express.static( __dirname + '/assets' ) );
+app.use( '/build', express.static( __dirname + '/build' ) );
 
-	console.log( 'Listening at localhost:' + config.port );
-});
+app.listen( app.get( 'port' ), function () {
+	console.log( 'Node app is running at localhost:' + app.get( 'port' ) );
+} );

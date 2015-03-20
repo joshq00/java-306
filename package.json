@@ -11,16 +11,17 @@
   },
   "author": "Josh Quintana",
   "dependencies": {
-    "flux": "^2.0.1",
-    "react": "^0.12.2",
     "babel-core": "^4.7.8",
     "babel-loader": "^4.1.0",
     "babelify": "^5.0.4",
     "css-loader": "^0.9.1",
+    "express": "^4.12.3",
+    "flux": "^2.0.1",
     "json-loader": "^0.5.1",
     "less": "^2.4.0",
     "less-loader": "^2.1.0",
     "node-lessify": "0.0.9-b",
+    "react": "^0.12.2",
     "react-hot-loader": "^1.2.2",
     "react-router": "^0.12.4",
     "react-tap-event-plugin": "^0.1.4",
@@ -28,7 +29,9 @@
     "webpack": "^1.7.2",
     "webpack-dev-server": "^1.7.0"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "engines": {
+    "node": "0.12.0"
   },
   "ify": {
     "transform": [
