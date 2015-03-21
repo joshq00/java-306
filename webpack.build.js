@@ -6,17 +6,25 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var webpack = _interopRequire(require("webpack"));
 
-var port = process.env.PORT || 5000;
-
-var devtool = "eval";
-
-var entry = ["./src/index"];
+var entry = {
+	index: "./src/index" };
 
 var output = {
 	path: __dirname + "/build/",
 	publicPath: "/build/",
-	// filename: '[name].js',
-	filename: "index.js" };
+	filename: "[name].js"
+	// devServer ? id : name
+	// chunkFilename: ( true ) ? '[id].js' : '[name].js',
+	// publicPath: '/_assets/',
+	// hot reload:
+	// sourceMapFilename: 'debugging/[file].map',
+	// ? idk
+	// pathinfo: true
+};
+
+var externals = {
+	react: "React"
+};
 
 var target = "web";
 
@@ -30,60 +38,34 @@ var loaders = [{
 }, {
 	test: /\.less$/,
 	loaders: ["style", "css", "less"] }];
-var _module = {
-	loaders: loaders };
-
-var resolveLoader = {
-	root: __dirname + "/node_modules",
-	alias: {}
-};
-
-var externals = {
-	react: "React"
-};
 
 var resolve = {
 	root: __dirname + "/src",
 	modulesDirectories: ["web_modules", "node_modules"],
 	extensions: ["", ".web.js", ".js", ".jsx"] };
 
-var devServer = {
-	stats: {
-		exclude: [/node_modules/]
-	}
-};
-
-var plugins = [new webpack.optimize.UglifyJsPlugin()];
+var plugins = [];
 
 module.exports = {
+	target: target,
 	module: { loaders: loaders },
-	port: port,
-	// devtool,
 	entry: entry,
 	output: output,
-	// target,
-	// resolveLoader,
-	// externals,
+	externals: externals,
 	resolve: resolve,
 	plugins: plugins };
 
-// devServer ? id : name
-// chunkFilename: ( true ) ? '[id].js' : '[name].js',
-// publicPath: '/_assets/',
-// hot reload:
-// sourceMapFilename: 'debugging/[file].map',
-// ? idk
-// pathinfo: true
+// vendor: [ 'react', 'flux' ]
 
-// loader: 'style-loader!css-loader!less-loader'
+// alias: {
+// 	'react': 'react/dist/react.min.js'
+// }
 
-// noParse: /\bdebug\b/,
+// new webpack.optimize.CommonsChunkPlugin(
+// 	"vendor", // chunkName
+// 	"vendor.bundle.js" // file
+// )
 
-// alias: {}
+// new webpack.optimize.UglifyJsPlugin()
 
-// devServer,
-
-// devtool: 'eval',
-// debug: true,
 // node: { fs: 'empty' },
-

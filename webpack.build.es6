@@ -1,19 +1,15 @@
 /* jshint node: true, esnext: true */
 import webpack from 'webpack';
 
-let port = process.env.PORT || 5000;
-
-let devtool = 'eval';
-
-let entry = [
-	'./src/index',
-];
+let entry = {
+	index: './src/index',
+	// vendor: [ 'react', 'flux' ]
+};
 
 let output = {
 	path: __dirname + '/build/',
 	publicPath: '/build/',
-	// filename: '[name].js',
-	filename: 'index.js',
+	filename: '[name].js'
 	// devServer ? id : name
 	// chunkFilename: ( true ) ? '[id].js' : '[name].js',
 	// publicPath: '/_assets/',
@@ -23,9 +19,11 @@ let output = {
 	// pathinfo: true
 };
 
+let externals = {
+	react: 'React'
+};
 
 let target = 'web';
-
 
 let loaders = [ {
 	test: /\.jsx?$/,
@@ -39,24 +37,7 @@ let loaders = [ {
 }, {
 	test: /\.less$/,
 	loaders: [ 'style', 'css', 'less' ],
-	// loader: 'style-loader!css-loader!less-loader'
 } ];
-let module = {
-	loaders,
-	// noParse: /\bdebug\b/,
-};
-
-
-let resolveLoader = {
-	root: __dirname + '/node_modules',
-	alias: {}
-};
-
-
-let externals = {
-	'react': 'React'
-};
-
 
 let resolve = {
 	root: __dirname + '/src',
@@ -70,36 +51,28 @@ let resolve = {
 		'.js',
 		'.jsx'
 	],
-	// alias: {}
+	// alias: {
+	// 	'react': 'react/dist/react.min.js'
+	// }
 };
 
-
-let devServer = {
-	stats: {
-		exclude: [
-			/node_modules/
-		]
-	}
-};
 
 let plugins = [
-	new webpack.optimize.UglifyJsPlugin()
+	// new webpack.optimize.CommonsChunkPlugin(
+	// 	"vendor", // chunkName
+	// 	"vendor.bundle.js" // file
+	// )
+
+	// new webpack.optimize.UglifyJsPlugin()
 ];
 
 export default {
+	target,
 	module: { loaders },
-	port,
-	// devtool,
 	entry,
 	output,
-	// target,
-	// resolveLoader,
-	// externals,
+	externals,
 	resolve,
 	plugins,
-	// devServer,
-
-	// devtool: 'eval',
-	// debug: true,
 	// node: { fs: 'empty' },
 };

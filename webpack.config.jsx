@@ -3,6 +3,7 @@ import webpack from 'webpack';
 
 let port = process.env.PORT || 3000;
 
+// let devtool = 'source-map';
 let devtool = 'eval';
 
 let entry = [
@@ -78,8 +79,8 @@ let resolve = {
 
 
 let plugins = [
-	new webpack.HotModuleReplacementPlugin(),
-	new webpack.NoErrorsPlugin()
+	// new webpack.HotModuleReplacementPlugin(),
+	// new webpack.NoErrorsPlugin()
 ];
 
 
@@ -104,7 +105,7 @@ export default {
 	plugins,
 	// devServer,
 
-	devtool: 'eval',
+	devtool,
 	// debug: true,
 	node: { fs: 'empty' },
 };

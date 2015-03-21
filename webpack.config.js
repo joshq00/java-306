@@ -8,6 +8,7 @@ var webpack = _interopRequire(require("webpack"));
 
 var port = process.env.PORT || 3000;
 
+// let devtool = 'source-map';
 var devtool = "eval";
 
 var entry = ["webpack-dev-server/client?http://localhost:" + port, "webpack/hot/only-dev-server", "./src/index"];
@@ -52,7 +53,7 @@ var resolve = {
 	modulesDirectories: ["web_modules", "node_modules"],
 	extensions: ["", ".web.js", ".js", ".jsx"] };
 
-var plugins = [new webpack.HotModuleReplacementPlugin(), new webpack.NoErrorsPlugin()];
+var plugins = [];
 
 var devServer = {
 	stats: {
@@ -73,7 +74,7 @@ module.exports = {
 	plugins: plugins,
 	// devServer,
 
-	devtool: "eval",
+	devtool: devtool,
 	// debug: true,
 	node: { fs: "empty" } };
 
@@ -85,3 +86,6 @@ module.exports = {
 // noParse: /\bdebug\b/,
 
 // alias: {}
+
+// new webpack.HotModuleReplacementPlugin(),
+// new webpack.NoErrorsPlugin()
