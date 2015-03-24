@@ -1,6 +1,7 @@
 # Java 306 homework
 * ~~Week 1~~
 * ~~Week 2~~
+* ~~Week 3~~
 
 
 ## Initial setup
