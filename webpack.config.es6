@@ -1,22 +1,16 @@
 /* jshint node: true, esnext: true */
 import webpack from 'webpack';
 
+let port = process.env.PORT || 3000;
+
 let entry = {
 	index: './src/index',
-	// vendor: [ 'react', 'flux' ]
 };
 
 let output = {
 	path: __dirname + '/build/',
 	publicPath: '/build/',
 	filename: '[name].js'
-	// devServer ? id : name
-	// chunkFilename: ( true ) ? '[id].js' : '[name].js',
-	// publicPath: '/_assets/',
-	// hot reload:
-	// sourceMapFilename: 'debugging/[file].map',
-	// ? idk
-	// pathinfo: true
 };
 
 let externals = {
@@ -51,19 +45,10 @@ let resolve = {
 		'.js',
 		'.jsx'
 	],
-	// alias: {
-	// 	'react': 'react/dist/react.min.js'
-	// }
 };
 
 
 let plugins = [
-	// new webpack.optimize.CommonsChunkPlugin(
-	// 	"vendor", // chunkName
-	// 	"vendor.bundle.js" // file
-	// )
-
-	// new webpack.optimize.UglifyJsPlugin()
 ];
 
 export default {
@@ -74,5 +59,5 @@ export default {
 	externals,
 	resolve,
 	plugins,
-	// node: { fs: 'empty' },
+	port,
 };
