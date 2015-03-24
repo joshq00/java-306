@@ -4,7 +4,6 @@
 
 
 ## Initial setup
-If you just want to view the page, you can open index.html
 
 **Required modules**
 
@@ -14,16 +13,17 @@ npm install;
 ```
 
 ## Build
-* Create `build/index.js`
+* Create `build/index.js` and run a server
 
 ```bash
-npm install -g webpack;
-webpack -p --config webpack.build.js;
+npm start;
+# or
+node server.js;
 ```
 
 ## Develop
 Run a server and view changes live (no reloading)!
 
 ```bash
-node server.js
+npm run dev;
 ```
