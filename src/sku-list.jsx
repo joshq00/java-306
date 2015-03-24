@@ -49,14 +49,15 @@ const Sku = React.createClass({
 			<dt>{ field.title }</dt>,
 			<dd>{ sku[ field.name ] }</dd>
 		]);
-		let item = this.props.fields.map( field => [
-		]);
 
 		let imgURL = `assets/${sku.imageS}`;
+		let img2x = imgURL.replace( /(?=\.)/, '-2x' );
 		return (
 		<div className='sku'>
 			<div className='photo'>
-				<img src={imgURL} />
+				<img src={imgURL}
+					srcSet={`${img2x} 2x`}
+					/>
 			</div>
 
 			<h4 className='title'>{sku.descr}</h4>
