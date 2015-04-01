@@ -1,0 +1,19 @@
+@require: `(function ( global ) {
+	global.require = ( global.require || global.process.mainModule.require );
+})( global )`;
+@pkg: `pkg = require( './package.json' )`;
+@version: ~`pkg.version`;
+
+@tablet: 420px;
+@desktop: 800px;
+
+@border-color: #979797;
+@gutter: 1rem;
+
+@backdrop-color: #333;
+@layout-bg-color: #ccc;
+
+@bg-color: white;
+@bg-color: #eee;
+
+@thd-orange: #F96302;

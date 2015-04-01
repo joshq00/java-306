@@ -1,0 +1,31 @@
+@import 'header';
+body {
+	background: @bg-color;
+}
+
+main {
+	// position: relative;
+	// top: 0;
+
+	&:before {
+		// content: '';
+		// height: 1.25em;
+		// margin: @gutter;
+		// display: block;
+
+		// .tablet({ height: 2.4em });
+		// .desktop({ display: none; });
+		// padding: @gutter;
+		// background: blue;
+		// position: relative;
+	}
+
+	.desktop({
+		top: 0;
+		border: 1px solid @border-color;
+		border-radius: @gutter;
+		margin: @gutter;
+		padding: @gutter;
+	});
+
+}

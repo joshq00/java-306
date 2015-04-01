@@ -3,6 +3,7 @@
   "node": true,
   "esnext": true,
   "globals": {
+    "mobileFramework": true
   },
   "predef": {
   },

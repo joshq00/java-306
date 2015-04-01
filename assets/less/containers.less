@@ -16,10 +16,6 @@ html {
 
 	font-size: 0.9rem;
 
-	.tablet({
-		font-size: 0.85rem;
-	});
-
 	.desktop({
 		font-size: 0.8rem;
 		background: @backdrop-color;
@@ -27,9 +23,6 @@ html {
 }
 
 body {
-	.desktop({
-		background: @layout-bg-color;
-	});
 	min-width: 275px;
 
 	/* always add copyright */
@@ -41,8 +34,13 @@ body {
 		padding: @gutter;
 	}
 
-	/* tablet - responsive */
+	.tablet({
+		font-size: 0.95em;
+	});
+
+	/* desktop - responsive */
 	.desktop({
+		background: @layout-bg-color;
 		margin: @gutter;
 		border-radius: @gutter;
 		box-shadow: 5px 4px 5px;
@@ -163,7 +161,7 @@ main {
 
 	&:before {
 		content: '';
-		height: 2.4em;
+		height: 3rem;
 		margin: @gutter;
 		// padding: @gutter;
 		// background: blue;

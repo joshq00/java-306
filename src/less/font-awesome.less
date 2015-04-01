@@ -1,0 +1,22 @@
+.fa {
+	font-family: FontAwesome;
+	&::after {
+		height: 1em;
+		width: 1em;
+		text-align: center;
+		display: block;
+		vertical-align: middle;
+	}
+}
+.fa-icon( @char ) {
+	.fa;
+	&::after {
+		content: @char;
+	}
+}
+.fa.cart {
+	.fa-icon( '\f07a' );
+}
+.fa.bars {
+	.fa-icon( '\f0c9' );
+}

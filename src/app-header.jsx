@@ -1,6 +1,11 @@
 import React from 'react';
 
 const AppHeader = React.createClass({
+	getDefaultProps () {
+		return {
+			store: null
+		};
+	},
 	render () {
 		return (
 		<header>
@@ -16,7 +21,7 @@ const AppHeader = React.createClass({
 					<li>Homer D. Poe</li>
 					<li><a href='#'>Logout</a></li>
 				</ul>
-				<span className='location'>Store #121</span>
+				<span className='location'>Store #{this.props.store}</span>
 			</div>
 
 			<button className='menu'></button>

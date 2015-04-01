@@ -1,15 +1,21 @@
 import { EventEmitter } from 'events';
-const skus = [];
 const CHANGE = 'change';
+let storeNbr = null;
+
 class SkuStore extends EventEmitter {
+	constructor () {
+		super();
+		mobileFramework.registerStoreCallback( nbr => {
+			storeNbr = nbr;
+			this.emitChange();
+		});
+	}
 
 	/**
 	 * Alert any listeners of changed data
 	 */
 	emitChange () {
-		process.nextTick( () => {
-			this.emit( CHANGE );
-		});
+		process.nextTick( () => this.emit( CHANGE ) );
 	}
 
 	/**
@@ -32,8 +38,8 @@ class SkuStore extends EventEmitter {
 	 * Get all items
 	 * @return {Item[]}
 	 */
-	getAll () {
-		return skus;
+	get () {
+		return storeNbr;
 	}
 }
 export default new SkuStore();

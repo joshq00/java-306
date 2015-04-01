@@ -43,7 +43,8 @@ let resolve = {
 		'',
 		'.web.js',
 		'.js',
-		'.jsx'
+		'.jsx',
+		'.json'
 	],
 };
 

@@ -1,0 +1,27 @@
+.z ( @dp ) {
+	z-index: @dp;
+	box-shadow: 0 (@dp/2px) (@dp*1px) fade(black, 25%);
+}
+
+.focus-bg() {
+	position: relative;
+	border: none;
+	outline: none;
+
+	&:focus::before {
+		@space: 0.4em;
+
+		background-color: rgba(0,0,0,.1);
+		border-radius: 2px;
+		bottom: -@space;
+		content: ' ';
+		left: -@space;
+		margin: auto;
+		padding: -@space;
+		position: absolute;
+		right: -@space;
+		top: -@space;
+		z-index: -1;
+	}
+}
+

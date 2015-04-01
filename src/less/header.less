@@ -1,0 +1,39 @@
+body {
+	margin-top: 3rem;
+}
+header {
+	background: @thd-orange;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 1.25em;
+	height: 3rem;
+
+	-webkit-font-smoothing: antialiased;
+	// z-index: 14;
+
+	.z( 9 );
+&.no-shadow {
+	box-shadow: none;
+}
+	> * {
+		// margin: 0 .5em;
+	}
+
+	a {
+		color: white;
+	}
+
+	@import 'header/menu';
+	@import 'header/cart';
+
+	h1 {
+		font-weight: normal;
+		font-size: 1em;
+		flex: 1 1 auto;
+		margin: 0 1em;
+	}
+}
